@@ -1,0 +1,22 @@
+---
+- hosts: "all"
+  tasks:
+  - name: "Check server status"
+    ansible.builtin.ping:
+
+  - name: "Get users from DB and write result to file"
+    ansible.builtin.command: psql -d nextcloud -c "SELECT * FROM oc_users" -o /tmp/users_from_db
+    become: true
+    become_user: postgres
+
+  - name: "Copy file from remote to local"
+    ansible.builtin.fetch:
+      src: /tmp/users_from_db
+      dest: /home/niko/Desktop/
+      flat: yes
+
+  - name: "Remove file from remote server"
+    ansible.builtin.file:
+      path: /tmp/users_from_db
+      state: absent
+    become: true
