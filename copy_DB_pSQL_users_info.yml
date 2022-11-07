@@ -5,6 +5,7 @@
     ansible.builtin.ping:
 
   - name: "Get users from DB and write result to file"
+# внимтельно с "ansible.builtin.command:"
     ansible.builtin.command: psql -d nextcloud -c "SELECT * FROM oc_users" -o /tmp/users_from_db
     become: true
     become_user: postgres
