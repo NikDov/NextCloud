@@ -1,0 +1,23 @@
+---
+#install
+- hosts: "all"
+  tasks:
+  - name: "Check server status"
+    ansible.builtin.ping:
+
+  - name: "install sshpass"
+    ansible.builtin.apt:
+      name: sshpass
+      state: latest
+
+
+#dellete
+# - hosts: "all"
+#   tasks:
+#   - name: "Check server status"
+#     ansible.builtin.ping:
+
+#   - name: "dell sshpass"
+#     ansible.builtin.apt:
+#       name: sshpass
+#       state: absent
