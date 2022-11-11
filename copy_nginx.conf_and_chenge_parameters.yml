@@ -1,9 +1,0 @@
----
-- hosts: "all"
-  tasks:
-
-  - name: "Copy nginx config file"
-    ansible.builtin.fetch:
-      src: /etc/nginx/conf.d/nextcloud.conf
-      dest: /home/niko/Desktop/
-      flat: yes
