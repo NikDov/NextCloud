@@ -1,0 +1,38 @@
+---
+- hosts: "all"
+  tasks:
+  - name: "check server status"
+    ansible.builtin.ping:
+
+  - name: "copy file from  /etc/nginx/conf.d  to  /Desktop"
+    ansible.builtin.copy:
+      src: /etc/nginx/conf.d/nextcloud.conf
+      dest: /home/pd6/Desktop/nextcloud.conf
+      remote_src: yes
+
+  - name: "edit string"
+    ansible.builtin.lineinfile:
+      path: /home/pd6/Desktop/nextcloud.conf
+      search_string: 'server_name nextcloud.pd16.com;'
+      line: server_name nextcloud.local.com;
+#   выяснить как добавить пробелы
+
+
+
+
+# - name: "Touch a file"
+#   ansible.builtin.file:
+#     path: /home/pd6/Desktop/test.txt
+#     state: touch
+#     mode: u=rw,g=r,o=r
+
+#  - name: "copy file from  /etc/nginx/conf.d  to  /Desktop"
+#    ansible.builtin.copy:
+#      src: /etc/nginx/conf.d/nextcloud.conf
+#      dest: /home/pd6/Desktop/nextcloud.conf
+#      remote_src: yes
+      
+#  - name: "create file in a remote server"
+#      ansible.builtin.file:
+#      path: /home/pd6/Desktop/test.txt
+#      state: touch
