@@ -1,3 +1,4 @@
+from audioop import add
 import nextcloud_client
 
 nc = nextcloud_client.Client('http://nextcloud.pd16.com:8081')
@@ -31,3 +32,13 @@ def add_user_to_group(user_name, group_name):
         print("<>INFO<>User added to group")
     except Exception:
         print("<>ERROR<>Can not add user to group:", group_name)
+
+
+def main():
+    user_name = "Chesnokov.Fedor.Alekseevich"
+    password = "10021998@@@"
+    group_name = "золотая"
+    create_user(user_name, password)
+    add_user_to_group(user_name, group_name)
+if __name__== "__main__" :
+    main()
