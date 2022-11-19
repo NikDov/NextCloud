@@ -5,7 +5,7 @@ nc.login('admin', '1996pd16')
 
 # на вход функция принимает два аргумента: user_name и password
 # user_name должен иметь вид --> Ivanov.Ivan.Ivanovich
-# пароль должен "быть сложным"
+# пароль должен быть "сложным" --> passHard1999@@@cool
 # например, create_user("Ivanov.Ivan.Ivanovich", "passHard1999@@@cool")
 
 def create_user(user_name, password):
