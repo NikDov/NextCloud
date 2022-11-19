@@ -35,9 +35,9 @@ def add_user_to_group(user_name, group_name):
 
 
 def main():
-    user_name = "Chesnokov.Fedor.Alekseevich"
-    password = "10021998@@@"
-    group_name = "золотая"
+    user_name = "<user_name>"
+    password = "<password>"
+    group_name = "<group_name>"
     create_user(user_name, password)
     add_user_to_group(user_name, group_name)
 if __name__== "__main__" :
