@@ -14,3 +14,5 @@ nc.login('admin', '1996pd16')
 #nc.create_user('Maria', '120612PdMsk')
 
 print('nc.get_users')
+print("Hello, Nik")
+
