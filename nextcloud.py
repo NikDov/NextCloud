@@ -1,7 +1,7 @@
 from audioop import add
 import nextcloud_client
 
-nc = nextcloud_client.Client('http://nextcloud.pd16.com:8081')
+nc = nextcloud_client.Client('http://nextcloud.pd16.com')
 nc.login('admin', '1996pd16')
 
 # на вход функция принимает два аргумента: user_name и password
@@ -22,7 +22,7 @@ def create_user(user_name, password):
 # на вход функция принимает два аргумента: user_name и group_name
 # user_name - это имя пользователя в системе nextcloud
 # group_name - это имя группы в системе nextcloud
-# например, add_user_to_group("Ivanov.Ivan.Ivanovich", "gold")
+# например, add_user_to_group("Ivanov.Ivan.Ivanovich", "золотая")
 
 def add_user_to_group(user_name, group_name):
     global nc
@@ -33,12 +33,38 @@ def add_user_to_group(user_name, group_name):
     except Exception:
         print("<>ERROR<>Can not add user to group:", group_name)
 
+# на выход принимает два аргумента: group_name и user_name
+# group_name - это имя группы в системе nextcloud
+# user_name - это имя пользователя в системе nextcloud
+# например, update_quota_for_user("золотая", "Ivanov.Ivan.Ivanovic")
+# quota_value измеряется в Gb
+
+def update_quota_for_user(group_name, user_name):
+    global nc
+    quota_value = None
+    if group_name == "золотая":
+        quota_value = "10"
+    elif group_name == "серебряная":
+        quota_value = "5"
+    elif group_name == "бронзовая":
+        quota_value = "1"
+
+    try:
+        nc.set_user_attribute(user_name, "quota", quota_value)
+        print("<>INFO<>User:", user_name, "group:", group_name, "quota:", quota_value)
+    except Exception:
+        print("<>ERROR<>Can not update quota for user:", user_name)
+    
+
+
+
 
 def main():
-    user_name = "<user_name>"
-    password = "<password>"
-    group_name = "<group_name>"
+    user_name = "Ivanov.Ilia.Antonovich"
+    password = "12No2022Septr"
+    group_name = "золотая"
     create_user(user_name, password)
     add_user_to_group(user_name, group_name)
+    update_quota_for_user(group_name, user_name)
 if __name__== "__main__" :
     main()
