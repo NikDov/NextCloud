@@ -37,7 +37,7 @@ def add_user_to_group(user_name, group_name):
 # group_name - это имя группы в системе nextcloud
 # user_name - это имя пользователя в системе nextcloud
 # например, update_quota_for_user("золотая", "Ivanov.Ivan.Ivanovic")
-# quota_value измеряется в Gb
+# quota_value измеряется в байтах (1ГБ = 1073741824 байт)
 
 def update_quota_for_user(group_name, user_name):
     global nc
