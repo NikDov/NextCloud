@@ -1,9 +1,10 @@
 from audioop import add
 import nextcloud_client
+from update_group_for_user import set_group_for_user
 
 nc = nextcloud_client.Client('http://nextcloud.pd16.com')
 nc.login('admin', '1996pd16')
 
-#Изменяет гвоту доступной памяти для пользовтаеля
-print(nc.set_user_attribute("Maria", "quota", "5"))
-#Золотая группа 10гб, серебрянная 5гб, бронзовая 1гб
+
+set_group_for_user(nc, "Maria", "бронзовая")
+
