@@ -3,6 +3,7 @@
 # пароль должен быть "сложным" --> passHard1999@@@cool
 # например, create_user("Ivanov.Ivan.Ivanovich", "passHard1999@@@cool")
 
+
 def create_user(nc, user_name, password):
     try:
         nc.create_user(user_name, password)
