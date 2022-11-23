@@ -11,7 +11,7 @@ import add_user_to_group
 import update_quota_for_user
 
 USER_NAME = "Anton"
-GROUP_NAME = "бронзовая"
+GROUP_NAME = "серебряная"
 
 nc = nextcloud_connect.nextcloud_connect()
 
