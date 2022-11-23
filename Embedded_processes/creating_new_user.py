@@ -1,13 +1,18 @@
+# Создание нового пользователя с параметрами группы и квоты
+# Создает пользователя
+# Добавляет пользователя в группу
+# Прописывает квоту пользователю
+
 import sys
 sys.path.insert(0, "/home/niko/Documents/GitHub/NextCloud/Custom_methods_for_user/")
-import create_user
 import nextcloud_connect
+import create_user
 import add_user_to_group
 import update_quota_for_user
 
-USER_NAME = "Ksenia"
-PASSWORD = "12390Mart!"
-GROUP_NAME = "золотая"
+USER_NAME = "Anton"
+PASSWORD = "12390Mart!!"
+GROUP_NAME = "серебряная"
 
 nc = nextcloud_connect.nextcloud_connect()
 
