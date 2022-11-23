@@ -11,7 +11,7 @@ def update_quota_for_user(nc, group_name, user_name):
     elif group_name == "серебряная":
         quota_value = "5368709120"
     elif group_name == "бронзовая":
-        quota_value = "107374182"
+        quota_value = "1073741824"
 
     try:
         nc.set_user_attribute(user_name, "quota", quota_value)
