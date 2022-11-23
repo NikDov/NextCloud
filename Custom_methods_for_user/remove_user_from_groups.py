@@ -1,3 +1,7 @@
+# на вход функция принимает аргумент: user_name
+# если юзер не умеет групп отобразится "юзер не имеет групп"
+# если юзер состоит в группе, то он будет удален из групп
+
 def remove_user_from_groups(nc, user_name):
     if len(nc.get_user_groups(user_name)) == 0:
         print("<>INFO<>User has not got group")
