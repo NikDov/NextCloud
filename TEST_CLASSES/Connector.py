@@ -3,15 +3,14 @@ import nextcloud_client
 
 class Connector():
 
-    def __init__(self, login, password):
-        self.login    = login
+    def __init__(self, url, login, password):
+        self.url = url
+        self.login = login
         self.password = password
-    
+
     
     def nextcloud_connect(self):
-        nc = nextcloud_client.Client('http://nextcloud.pd16.com')
+        nc = nextcloud_client.Client(self.url)
         nc.login(self.login, self.password)
         return nc
 
-
-connector = Connector("admin", "1996pd16")
