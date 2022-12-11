@@ -7,7 +7,7 @@ class Connector():
         self.url = url
         self.login = login
         self.password = password
-
+    
     
     def nextcloud_connect(self):
         nc = nextcloud_client.Client(self.url)

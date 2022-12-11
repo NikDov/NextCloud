@@ -18,22 +18,53 @@
 
 
 
-class Human():
+# class Human():
 
-    def __init__(self, name, age, work):
-        self.name = name
-        self.age = age
-        self.work = work
-        print('Человек создан')
+#     def __init__(self, name, age, work):
+#         self.name = name
+#         self.age = age
+#         self.work = work
+#         print('Человек создан')
 
-    def sit():
-        print("Human is sitting")
+#     def sit():
+#         print("Human is sitting")
 
 
 
-chel = Human("igor", 30, "devops")
+# chel = Human("igor", 30, "devops")
 
-print(chel.work)
+# print(chel.work)
+
+
+
+
+
+
+
+
+def func():
+
+    a = 10
+    b = None
+    if a == 10:
+        b = "a == 10" 
+    else:
+        b = "a != 10"
+    print(b)
+    return b
+
+
+def func2(string):
+
+    if string == "a != 10":
+        print("OK")
+    else:
+        print("NOT OK")
+
+
+string = func()
+
+func2(string)
 
 
 
