@@ -1,6 +1,26 @@
-from Connector import Connector
+# class Test():
 
 
-connector = Connector("http://nextcloud.pd16.com:8081", "admin", "1996pd16")
-x = connector.connection
-x.get_user("Fedor")
+#     def __init__(self):
+#         pass
+
+
+#     def func(self, name):
+#         print(name)
+#         return name
+
+
+# test = Test()
+# test1 = Test()
+
+# #print(test)
+# #print(test1)
+
+# test.func("Nik")
+# test1.func("Fedor")
+
+
+
+
+
+
