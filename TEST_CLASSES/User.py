@@ -1,13 +1,13 @@
-''' кастомные методы для класса User '''
+    # кастомные методы для класса User
 
 class User():
 
-    ''' class for users in nextcloud '''
+    # class for users in nextcloud
     def __init__(self):
         pass
     
 
-    ''' method for create user '''
+    # method for create user
     def create_user(self, connector, name, password):
 
         print("<>INFO<>Checking user exists")
@@ -25,7 +25,7 @@ class User():
                 exit()
         
        
-    ''' method for remove user '''
+    # method for remove user
     def remove_user(self, connector, name):
 
         print("<>INFO<>Checking user exists")
@@ -42,7 +42,7 @@ class User():
                 exit()
 
 
-    ''' method for add user to group '''
+    # method for add user to group
     def add_user_to_group(self, connector, name, group):
         
         try:
@@ -54,7 +54,7 @@ class User():
             exit()
 
 
-    ''' method for remove user from groups for change quota '''
+    # method for remove user from groups for change quota
     def remove_user_from_groups(self, connector, name):
         
         if len(connector.get_user_groups(name)) == 0:
@@ -68,7 +68,7 @@ class User():
                     print("<>ERROR<>Can not remowe user from group:", name)
                     exit()
 
-    ''' method for update quota for user '''
+    # method for update quota for user
     def update_quota_for_user(self, connector, group, name):
         
         quota_value = None
@@ -85,12 +85,11 @@ class User():
             print("<>ERROR<>Can not update quota for user:", name)
             exit()
 
-    ''' methods for add user email '''
-    def add_user_mail(self, connector, name, email):
+    # methods for add user email
+    def add_user_email(self, connector, name, email):
         try:
             connector.set_user_attribute(name, "email", email)
             print("<>INFO<>User:", name, "email:", email)
         except Exception:
             print("<>ERROR<>Can not set email for user:", name)
             exit()
-            

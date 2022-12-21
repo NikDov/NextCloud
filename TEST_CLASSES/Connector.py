@@ -13,7 +13,6 @@ class Connector():
         nc.login(self.login, self.password)
         return nc
 
-
 # import os
 
 # URL      = os.environ.get("NEXTCLOUD_URL")
