@@ -13,13 +13,3 @@ class Connector():
         nc.login(self.login, self.password)
         return nc
 
-# import os
-
-# URL      = os.environ.get("NEXTCLOUD_URL")
-# USERNAME = os.environ.get("NEXTCLOUD_USERNAME")
-# PASSWORD = os.environ.get("NEXTCLOUD_PASSWORD")
-
-
-# connector = Connector(URL, USERNAME, PASSWORD).nextcloud_connect()
-# #connector.mkdir("testdir")
-# connector.put_file("testdir/", "/home/nik/Desktop/nc_test.txt")
