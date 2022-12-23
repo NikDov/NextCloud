@@ -11,5 +11,5 @@ class File():
             connector.share_file_with_user('testdir/nc_test.txt', name)
             print("<>INFO<>File is shared for user:", name)
         except Exception as err:
-            print("<>ERROR<>File can not share for user:", name, "error:", err)
+            print(f"<>ERROR<>File can not share for user: {name} error: {err}")
             exit()
