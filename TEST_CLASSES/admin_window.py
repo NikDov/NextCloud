@@ -27,7 +27,7 @@ username = tk.Entry(adm_window)
 username.grid(row=0, column=1)
 
 tk.Label(adm_window, text="Password").grid(row=1, column=0)
-password = tk.Entry(adm_window)
+password = tk.Entry(adm_window, show="*")
 password.grid(row=1, column=1)
 
 adm_window.grid_columnconfigure(0, minsize=100)
