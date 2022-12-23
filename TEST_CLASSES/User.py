@@ -20,8 +20,8 @@ class User():
                 print("<>INFO<>Creating user:", name)
                 print("<>INFO<>Get user displayname:", connector.get_user(name)["displayname"])
                 print("<>INFO<>User created")
-            except Exception:
-                print("<>ERROR<>Can not create user:", name)
+            except Exception as err:
+                print("<>ERROR<>Can not create user:", name, "error:", err)
                 exit()
         
        
@@ -37,8 +37,8 @@ class User():
                 connector.delete_user(name)
                 print("<>INFO<>Removing user:", name)
                 print("<>INFO<>User removed")
-            except Exception:
-                print("<>INFO<>Can not remove user:", name)
+            except Exception as err:
+                print("<>INFO<>Can not remove user:", name, "error:", err)
                 exit()
 
 
