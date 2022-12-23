@@ -12,7 +12,7 @@ connector = Connector(credentials.NEXTCLOUD_URL, credentials.NEXTCLOUD_USERNAME,
 user = User()
 file = File()
 
-name = "Nikita.Chel"     # задать параметры для создания пользовтаеля
+name = "Nikita.Chelll"     # задать параметры для создания пользовтаеля
 password = "MsK2022Ears!"
 group = 'золотая'   # Впиши : золотая, серебряная или бронзовая
 email = 'Nikita@mail.ru'

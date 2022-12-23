@@ -13,11 +13,3 @@ class Connector():
         nc = nextcloud_client.Client(self.url)
         nc.login(self.login, self.password)
         return nc
-
-
-
-# connector.put_file("testdir/", "/home/nik/Desktop/nc_test.txt")
-
-
-# connector = Connector(credentials.NEXTCLOUD_URL, credentials.NEXTCLOUD_USERNAME, credentials.NEXTCLOUD_PASSWORD).nextcloud_connect()
-# connector.share_file_with_user('testdir/nc_test.txt', 'Nikita.Chel')
