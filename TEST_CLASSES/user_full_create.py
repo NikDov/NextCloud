@@ -1,6 +1,5 @@
-    # кастом метод создающий пользователя с группой и квотой.
-
-    # WARNING !!! перед запуском вызови в теримнале файл.sh с логином и паролем админа, далее запускай код.
+# кастом метод создающий пользователя FULL.
+# WARNING !!! перед запуском вызови в теримнале файл.sh с логином и паролем админа, далее запускай код.
 
 from Connector import Connector
 from User import User
@@ -8,7 +7,6 @@ import credentials
 from File import File
 
 connector = Connector(credentials.NEXTCLOUD_URL, credentials.NEXTCLOUD_USERNAME, credentials.NEXTCLOUD_PASSWORD).nextcloud_connect()
-# connector = Connector("http://nextcloud.pd16.com:8081", "admin", "1996pd16").nextcloud_connect()
 user = User()
 file = File()
 
