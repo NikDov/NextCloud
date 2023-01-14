@@ -6,7 +6,9 @@ from User import User
 import credentials
 from File import File
 
-connector = Connector(credentials.NEXTCLOUD_URL, credentials.NEXTCLOUD_USERNAME, credentials.NEXTCLOUD_PASSWORD).nextcloud_connect()
+connector = Connector(credentials.NEXTCLOUD_URL, 
+                      credentials.NEXTCLOUD_USERNAME, 
+                      credentials.NEXTCLOUD_PASSWORD).nextcloud_connect()
 user = User()
 file = File()
 

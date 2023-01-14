@@ -15,5 +15,7 @@ class Connector():
         nc.login(self.login, self.password)
         return nc
 
-connector = Connector(credentials.NEXTCLOUD_URL, credentials.NEXTCLOUD_USERNAME, credentials.NEXTCLOUD_PASSWORD)
+connector = Connector(credentials.NEXTCLOUD_URL, 
+                      credentials.NEXTCLOUD_USERNAME, 
+                      credentials.NEXTCLOUD_PASSWORD)
 connector.get_users()
